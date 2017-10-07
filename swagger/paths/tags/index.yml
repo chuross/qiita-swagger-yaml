@@ -1,0 +1,12 @@
+get:
+  tags: ['Tags']
+  parameters:
+    - $ref: '#/parameters/page'
+    - $ref: '#/parameters/per_page'
+  responses:
+    200:
+      description: ''
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Tag'

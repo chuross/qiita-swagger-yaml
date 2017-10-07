@@ -6,8 +6,12 @@
   "scripts": {
     "install": "[ -f ./bin/swagger-codegen-cli-$npm_package_config_swagger_version.jar ] || (npm run clean:bin && wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/$npm_package_config_swagger_version/swagger-codegen-cli-$npm_package_config_swagger_version.jar -O ./bin/swagger-codegen-cli-$npm_package_config_swagger_version.jar)",
     "init": "swaglow init -o swagger",
-    "build": "swaglow build -i swagger -o output && swagger-tools validate output/swagger.yml",
-    "clean:bin": "rm -rf bin && mkdir bin"
+    "build:yaml": "swaglow build -i swagger -o output && swagger-tools validate output/swagger.yml",
+    "build:code": "java -jar ./bin/swagger-codegen-cli-$npm_package_config_swagger_version.jar generate -i output/swagger.yml -o output/code -l ",
+    "build:java": "npm-run-all -s build:yaml \"build:code -- java\"",
+    "build:swift3": "npm-run-all -s build:yaml \"build:code -- swift3\"",
+    "clean:bin": "rm -rf bin && mkdir bin",
+    "clean:code": "rm -rf output/code && mkdir output/code"
   },
   "config": {
     "swagger_version": "2.2.3"

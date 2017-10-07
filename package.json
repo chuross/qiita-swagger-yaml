@@ -1,0 +1,12 @@
+{
+  "name": "qiita-swagger-yaml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "swaglow init -o swagger",
+    "build": "swaglow build -i swagger -o output"
+  },
+  "author": "",
+  "license": "ISC"
+}

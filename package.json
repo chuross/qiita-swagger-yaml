@@ -9,9 +9,10 @@
     "build:yaml": "swaglow build -i swagger -o output && swagger-tools validate output/swagger.yml",
     "build:code": "java -jar ./bin/swagger-codegen-cli-$npm_package_config_swagger_version.jar generate -i output/swagger.yml -o output/code -l ",
     "build:java": "npm-run-all -s build:yaml clean:code \"build:code -- java\"",
-    "build:swift3": "npm-run-all -s build:yaml clean:code \"build:code -- swift3\"",
+    "build:swift": "npm-run-all -s build:yaml clean:code \"build:code -- swift3 -c config.json\"",
     "clean:bin": "rm -rf bin && mkdir bin",
-    "clean:code": "rm -rf output/code && mkdir output/code"
+    "clean:code": "rm -rf output/code && mkdir output/code",
+    "publish:swift": "npm run build:swift && cd output/code && sh git_push.sh chuross qiita-api-client"
   },
   "config": {
     "swagger_version": "2.2.3"

@@ -1,0 +1,8 @@
+{
+    "projectName": "CHQiitaApiClient",
+    "unwrapRequired": "true",
+    "responseAs": "RxSwift",
+    "podSource": "https://github.com/chuross/qiita-api-client",
+    "podVersion": "0.0.1",
+    "podAuthors": "chuross"
+}

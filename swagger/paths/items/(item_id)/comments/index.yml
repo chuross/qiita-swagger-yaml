@@ -1,0 +1,14 @@
+get:
+  tags: ['Comments']
+  parameters:
+    - name: item_id
+      type: string
+      in: path
+      required: true
+  responses:
+    200:
+      description: ''
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Comment'

@@ -1,0 +1,18 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+  user:
+    $ref: '#/definitions/User'
+  body:
+    type: string
+  rendered_body:
+    type: string
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

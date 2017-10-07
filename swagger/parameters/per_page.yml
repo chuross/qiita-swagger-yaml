@@ -1,0 +1,6 @@
+name: per_page
+in: query
+type: integer
+minimum: 1
+maximum: 100
+default: 1

@@ -5,6 +5,8 @@ get:
       type: string
       in: query
       required: true
+    - $ref: '#/parameters/page'
+    - $ref: '#/parameters/per_page'
   responses:
     200:
       description: ''

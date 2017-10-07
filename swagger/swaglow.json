@@ -1,4 +1,4 @@
 {
-	"title": "Qiita",
-	"baseUrl": "https://qiita.com/api/v2/"
+  "title": "Qiita",
+  "baseUrl": "https://qiita.com/api/v2/"
 }

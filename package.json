@@ -18,6 +18,7 @@
     "swaglow": "^1.0.4"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.1",
     "swagger-tools": "^0.10.1"
   }
 }

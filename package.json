@@ -4,9 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install": "[ -f ./bin/swagger-codegen-cli-$npm_package_config_swagger_version.jar ] || (npm run clean:bin && wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/$npm_package_config_swagger_version/swagger-codegen-cli-$npm_package_config_swagger_version.jar -O ./bin/swagger-codegen-cli-$npm_package_config_swagger_version.jar)",
     "init": "swaglow init -o swagger",
-    "build": "swaglow build -i swagger -o output"
+    "build": "swaglow build -i swagger -o output && swagger-tools validate output/swagger.yml",
+    "clean:bin": "rm -rf bin && mkdir bin"
+  },
+  "config": {
+    "swagger_version": "2.2.3"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "swaglow": "^1.0.4"
+  },
+  "devDependencies": {
+    "swagger-tools": "^0.10.1"
+  }
 }

@@ -1,0 +1,14 @@
+get:
+  tags: ['Items']
+  parameters:
+    - name: query
+      type: string
+      in: query
+      required: true
+  responses:
+    200:
+      description: ''
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Item'

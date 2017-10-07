@@ -1,4 +1,4 @@
 {
-	"title": "your project title",
-	"baseUrl": "ex) https://example.com/api/v1"
+	"title": "Qiita",
+	"baseUrl": "https://qiita.com/api/v2/"
 }

@@ -1,0 +1,30 @@
+get:
+  tags: ['Stock']
+  parameters:
+    - name: item_id
+      type: string
+      in: path
+      required: true
+  responses:
+    204:
+      description: ''
+put:
+  tags: ['Stock']
+  parameters:
+    - name: item_id
+      type: string
+      in: path
+      required: true
+  responses:
+    204:
+      description: ''
+delete:
+  tags: ['Stock']
+  parameters:
+    - name: item_id
+      type: string
+      in: path
+      required: true
+  responses:
+    204:
+      description: ''

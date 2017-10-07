@@ -1,0 +1,20 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  description:
+    type: string
+  followees_count:
+    type: integer
+  followers_count:
+    type: integer
+  items_count:
+    type: integer
+  profile_image_url:
+    type: string
+  website_url:
+    type: string

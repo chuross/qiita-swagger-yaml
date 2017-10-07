@@ -5,9 +5,27 @@ required:
 properties:
   id:
     type: string
+  user:
+    $ref: '#/definitions/User'
   title:
     type: string
   body:
     type: string
   rendered_body:
     type: string
+  url:
+    type: string
+  likes_count:
+    type: integer
+  comments_count:
+    type: integer
+  tags:
+    type: array
+    items:
+      $ref: '#/definitions/Tag'
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

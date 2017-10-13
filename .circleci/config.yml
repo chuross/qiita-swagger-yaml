@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:8.7.0
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            apt-get update
+            apt-get install -y openjdk-7-jdk
+            npm install --unsafe-perm
+      - run:
+          name: Publish swift code
+          command: |
+            git config --global user.name chuross
+            git config --global user.email azarasi.mo.mo@gmail.com
+            npm run publish:swift

@@ -1,0 +1,16 @@
+box: node:8.7.0
+
+build:
+  steps:
+    - script:
+      name: install dependencies
+      code: |
+        apt-get update
+        apt-get install -y openjdk-7-jdk
+        npm install --unsafe-perm
+    - script:
+      name: publish swift code
+      code: |
+        git config --global user.name chuross
+        git config --global user.email azarasi.mo.mo@gmail.com
+        npm run publish:swift &>/dev/null

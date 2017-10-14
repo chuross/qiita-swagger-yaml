@@ -4,6 +4,7 @@
     "responseAs": "RxSwift",
     "podSource": "{ :git => \"https://github.com/chuross/CHQiitaApiClient.git\", :tag => \"#{s.version}\" }",
     "podAuthors": "chuross",
+    "podLicense": "{ :type => 'MIT' }",
     "podHomepage": "https://github.com/chuross/CHQiitaApiClient",
     "podSummary": "qiita client"
 }

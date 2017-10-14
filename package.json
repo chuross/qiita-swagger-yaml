@@ -12,7 +12,7 @@
     "build:swift": "VERSION=$(node -pe 'require(\"./package.json\").version') && npm-run-all -s build:yaml clean:code \"build:code -- swift3 -c config.swift.json -DpodVersion=$VERSION\"",
     "clean:bin": "rm -rf bin && mkdir bin",
     "clean:code": "rm -rf output/code && mkdir output/code",
-    "publish:swift": "VERSION=$(node -pe 'require(\"./package.json\").version') && npm run build:swift && cd output/code && sh git_push.sh chuross qiita-api-client && git tag $VERSION && git push -f origin $VERSION"
+    "publish:swift": "VERSION=$(node -pe 'require(\"./package.json\").version') && npm run build:swift && cd output/code && sh git_push.sh chuross CHQiitaApiClient && git tag $VERSION && git push -f origin $VERSION"
   },
   "config": {
     "swagger_version": "2.2.3"

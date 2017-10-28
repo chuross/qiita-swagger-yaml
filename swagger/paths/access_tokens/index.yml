@@ -1,0 +1,20 @@
+post:
+  tags: ['Tokens']
+  parameters:
+    - name: client_id
+      type: string
+      in: query
+      required: true
+    - name: client_secret
+      type: string
+      in: query
+      required: true
+    - name: code
+      type: string
+      in: query
+      required: true
+  responses:
+    200:
+      description: ''
+      schema:
+        $ref: '#/definitions/Token'

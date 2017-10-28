@@ -1,0 +1,12 @@
+type: object
+required:
+  - token
+properties:
+  client_id:
+    type: string
+  scopes:
+    type: array
+    items:
+      type: string
+  token:
+    type: string

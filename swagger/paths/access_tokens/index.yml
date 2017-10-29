@@ -3,6 +3,7 @@ post:
   parameters:
     - name: body
       in: body
+      required: true
       schema:
         type: object
         required:

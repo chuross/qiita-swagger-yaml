@@ -1,0 +1,7 @@
+get:
+  tags: ['Users']
+  responses:
+    200:
+      description: ''
+      schema:
+        $ref: '#/definitions/User'

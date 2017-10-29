@@ -1,18 +1,21 @@
 post:
   tags: ['Tokens']
   parameters:
-    - name: client_id
-      type: string
-      in: query
-      required: true
-    - name: client_secret
-      type: string
-      in: query
-      required: true
-    - name: code
-      type: string
-      in: query
-      required: true
+    - name: body
+      in: body
+      schema:
+        type: object
+        required:
+          - client_id
+          - client_secret
+          - code
+        properties:
+          client_id:
+            type: string
+          client_secret:
+            type: string
+          code:
+            type: string
   responses:
     200:
       description: ''
